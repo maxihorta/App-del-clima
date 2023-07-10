@@ -27,7 +27,7 @@ function App() {
   });
 
   
-console.log(apiKey)
+
   function onClose(id) {
     setCities(oldCities => oldCities.filter(c => c.id !== id));
   }
@@ -91,7 +91,7 @@ console.log(apiKey)
         />
         {/* params siempre es un string, de la URL */}
         <Route
-          exact path='/ciudad/:ciudadId' exact
+          exact path='/ciudad/:ciudadId' 
           render={({match}) => <Ciudad city={onFilter(match.params.ciudadId)}/>}
         />
         {/* Las cards deben aparecer solo en "/" */}
